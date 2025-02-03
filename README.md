@@ -15,4 +15,4 @@ EventSync is a progressive web application designed to help users manage and RSV
 
 ### Demo
 
-<img src="./eventsync.gif" width="250" alt="EventSync Demo">
+<img src="./eventsync.gif" width="270" alt="EventSync Demo">
