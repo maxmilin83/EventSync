@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  <title>Login/Register</title>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>EventSync</h1>
+    
+        <!-- Login Form -->
+        <div id="login-form" class="auth-form active">
+          <h2>Login</h2>
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input type="password" id="login-password" placeholder="Password" required />
+          <button id="login-btn">Login</button>
+          <p>
+            Don’t have an account? 
+            <button id="switch-to-register" class="toggle-btn">Register</button>
+          </p>
+        </div>
+    
+        <!-- Register Form -->
+        <div id="register-form" class="auth-form hidden">
+          <h2>Register</h2>
+          <input type="text" id="register-username" placeholder="Username" required />
+          <input type="email" id="register-email" placeholder="Email" required />
+          <input type="password" id="register-password" placeholder="Password" required />
+          <button id="register-btn">Register</button>
+          <p>
+            Already have an account? 
+            <button id="switch-to-login" class="toggle-btn">Login</button>
+          </p>
+        </div>
+        <br>
+        <p id="auth-message" class="auth-message"></p>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+      
+      <script>document.getElementById("switch-to-register").addEventListener("click", function () {
+        document.getElementById("login-form").classList.remove("active");
+        document.getElementById("register-form").classList.add("active");
+      });
+      
+      document.getElementById("switch-to-login").addEventListener("click", function () {
+        document.getElementById("register-form").classList.remove("active");
+        document.getElementById("login-form").classList.add("active");
+      });</script>
+
+  
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/firebase.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>
